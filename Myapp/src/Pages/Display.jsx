@@ -27,6 +27,8 @@ const Display=()=>{
                 <td>{key.city}</td>
                 <td>{key.salary}</td>
             </tr>
+
+           
             </>
         )
     })
@@ -46,8 +48,11 @@ const Display=()=>{
       </thead>
       <tbody> 
         {ans}
-      </tbody>
-      </Table>
+      </tbody> 
+       </Table>
+
+
+    
 
 
         
