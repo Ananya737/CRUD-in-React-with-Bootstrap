@@ -130,18 +130,18 @@
 // // export default App;
 
 
-import Temp from "./Temp";
+// import Temp from "./Temp";
 
-const App=()=>{
-  return(
-    <>
-    <h1>Welcome!!!!</h1>
-    <Temp>
-      <h2>Hi, I am a child of Temp component!</h2>
+// const App=()=>{
+//   return(
+//     <>
+//     <h1>Welcome!!!!</h1>
+//     <Temp>
+//       <h2>Hi, I am a child of Temp component!</h2>
 
-    </Temp>
+//     </Temp>
     
-    </>
-  )
-}
-export default App;
+//     </>
+//   )
+// }
+// export default App;
