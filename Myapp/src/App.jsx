@@ -7,6 +7,10 @@
 // import Update from "./Pages/Update";
 // import MyEdit from "./Pages/MyEdit";
 
+import Auth from "./Auth";
+import { myContext } from "./LoginContext";
+import UnAuth from "./UnAuth";
+
 
 
 
@@ -169,33 +173,18 @@
 
 
 
+import { useContext } from "react";
 
 
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Home from "./TempPages/Home";
-import Layout from "./TempPages/Layout";
-import Insert from "./TempPages/Insert";
-import Display from "./TempPages/Display";
-import Search from "./TempPages/Search";
-import Update from "./TempPages/Update";
+
 
 
 const App=()=>{
+    const {user}=useContext(myContext);
     return(
         <>
-        <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path="home" element={<Home/>}/>
-            <Route path="insert" element={<Insert/>}/>
-            <Route path="display" element={<Display/>}/>
-            <Route path="search" element={<Search/>}/>
-            <Route path="update" element={<Update/>}/>
-
-            </Route>
-        </Routes>
-        </BrowserRouter>
+       <h1>Login System!</h1>
+       {user.auth? <Auth/> : <UnAuth/> }
         
         
         </>
