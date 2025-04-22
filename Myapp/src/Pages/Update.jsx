@@ -86,12 +86,3 @@ export default Update;
 
 
 
-// const Update=()=>{
-//     return(
-//         <>
-//         <h1>Hello!</h1>
-        
-//         </>
-//     )
-// }
-// export default Update;

@@ -25,7 +25,7 @@ const Insert=()=>{
           city:"",
           salary:""
         })
-        // alert("Data saved!")
+        
         toast.success("Saved!");
        
      
