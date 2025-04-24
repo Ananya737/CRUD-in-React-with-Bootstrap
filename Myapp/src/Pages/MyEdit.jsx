@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";   //(hook) searches id from url;
  const myEdit=()=>{
    const {id} = useParams();    //returns object;
     const [mydata, setMydata]=useState({});
+
     const loadData=async()=>{
      let api=`http://localhost:3000/Employees/${id}`;
      const resposne = await axios.get(api);
@@ -17,7 +18,7 @@ import { useParams } from "react-router-dom";   //(hook) searches id from url;
     useEffect(()=>{
      loadData();
     }, []);
- 
+
     const handleInput=(e)=>{
       let name=e.target.name;
       let value= e.target.value;
@@ -29,9 +30,7 @@ import { useParams } from "react-router-dom";   //(hook) searches id from url;
      let api=`http://localhost:3000/Employees/${id}`;
      const response = await axios.put(api, mydata);
      
-    toast.warning("Data succesfully Updated!", {
-         position: "top-left"
-       });
+    toast.warning("Data succesfully Updated!")
     }
  
  

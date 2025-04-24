@@ -269,38 +269,46 @@
 
 //------------------------------------------------------------------------useReducer hook------------------------------------------------------------------------------
 
-
 import { useReducer } from "react";
 
 
-
-
 const App=()=>{
-  const [cnt,dispatch]=useReducer(reducerMethod,0);
 
+  const method=(state,action)=>{
+    let cnt=0;
+    switch(action){
+      case "Increment" : return state+1;
+      case "Decrement" : return state-1;
+      case "Reset"     : return cnt;
+      default          : return count;
+      
+    }
 
-
-const reducerMethod=(state,action)=>{
-  switch(action){
-    case "Increment": return state+1;
-    case "Decrement": return state-1;
-    default : return state;
   }
-}
+
+
+  const [count,dispatch]=useReducer(method,0);
+
 
   return(
     <>
-    <button onClick={()=>{dispatch("Increment")}}>Increment</button>
 
-    <h1>Count :{cnt}</h1>
 
-    <button  onClick={()=>{dispatch("Decrement")}}>Decrement</button>
+  <h1>Count : {count}</h1>
 
+  <button onClick={()=>{dispatch("Increment")}}>Increment</button>
+  <button onClick={()=>{dispatch("Decrement")}}>Decrement</button>
+  <button onClick={()=>{dispatch("Reset")}}>Reset</button>
+
+    
+    
+    
     
     </>
   )
 }
 export default App;
+
 
 
 

@@ -38,7 +38,7 @@ const Insert=()=>{
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter Name</Form.Label>
-        <Form.Control type="text" onChange={handleInput} name='name'   value={input.name}/>
+        <Form.Control type="text" onChange={handleInput} name='name' value={input.name}/>
         
       </Form.Group>
 
