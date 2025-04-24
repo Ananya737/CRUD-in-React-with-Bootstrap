@@ -155,7 +155,7 @@
 
 
 
-
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -349,11 +349,38 @@
 
 
 
+// -------------------------------------------------------------useMemo hook--------------------------------------------------------------
+//Expensive functions: jo baar render honde pe chalte hain. useMemo expensive function ko chalne se rok deta hai
 
 
 
+import { useState} from "react";
+
+
+const App=()=>
+{
+
+  const [num,setNum]=useState("");
+  const [name,setName]=useState("");
+  
+const multi=()=>{
+  for(var i=0;i<1000000000;i++){};
+  return num*2;
+}
+  
 
 
 
+  return(
+    <>
+ 
+Enter number:<input type="number" value={num} onChange={(e)=>{setNum(e.target.value)}}/>
+Enter name:<input type="text" value={name}  onChange={(e)=>{setName(e.target.value)}}/>
 
-
+<h1>Multiplication: {multi()}</h1>
+    
+    
+    </>
+  )
+}
+export default App;
