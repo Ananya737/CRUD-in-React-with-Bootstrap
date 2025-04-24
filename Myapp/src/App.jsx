@@ -269,45 +269,77 @@
 
 //------------------------------------------------------------------------useReducer hook------------------------------------------------------------------------------
 
-import { useReducer } from "react";
+// import { useReducer } from "react";
 
+// const App=()=>{
 
-const App=()=>{
-
-  const method=(state,action)=>{
-    let cnt=0;
-    switch(action){
-      case "Increment" : return state+1;
-      case "Decrement" : return state-1;
-      case "Reset"     : return cnt;
-      default          : return count;
+//   const method=(state,action)=>{
+//     let cnt=0;
+//     switch(action){
+//       case "Increment" : return state+1;
+//       case "Decrement" : return state-1;
+//       case "Reset"     : return cnt;
+//       default          : return count;
       
-    }
+//     }
 
-  }
-
-
-  const [count,dispatch]=useReducer(method,0);
+//   }
+//   const [count,dispatch]=useReducer(method,0);
 
 
-  return(
-    <>
+//   return(
+//     <>
+//   <h1>Count : {count}</h1>
+
+//   <button onClick={()=>{dispatch("Increment")}}>Increment</button>
+//   <button onClick={()=>{dispatch("Decrement")}}>Decrement</button>
+//   <button onClick={()=>{dispatch("Reset")}}>Reset</button>
+  
+//     </>
+//   )
+// }
+// export default App;
 
 
-  <h1>Count : {count}</h1>
 
-  <button onClick={()=>{dispatch("Increment")}}>Increment</button>
-  <button onClick={()=>{dispatch("Decrement")}}>Decrement</button>
-  <button onClick={()=>{dispatch("Reset")}}>Reset</button>
+// --------------------------------------------------------------Chatgpt question----------------------------------------------------------------------
 
-    
-    
-    
-    
-    </>
-  )
-}
-export default App;
+// import { useReducer } from "react";
+
+// const App=()=>{
+
+// const method=(state,action)=>{
+//   let initial=0;
+//   switch(action){
+//     case "Increment": return state+1;
+//     case "Decrement": return state-1;
+//     case "Reset": return initial;
+//     case "Custom": return state+5;
+//  }
+// }
+// const [count,dispatch]=useReducer(method,0);
+ 
+// return(
+//     <>
+
+//     <h1>Count :{count}</h1>
+
+//     <button onClick={()=>dispatch("Increment")}>Increment</button>
+//     <button onClick={()=>dispatch("Decrement")}>Decrement</button>
+//     <button onClick={()=>dispatch("Reset")}>Reset</button>
+//     <button onClick={()=>dispatch("Custom")}>Increment By 5</button>
+ 
+//     </>
+//   )
+// }
+// export default App;
+
+
+// -----------------------------------------------------Chatgpt question: increment by custom value-------------------------------------------------------------------
+
+
+
+
 
 
 
