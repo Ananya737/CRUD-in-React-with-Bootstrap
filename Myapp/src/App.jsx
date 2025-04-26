@@ -354,7 +354,7 @@
 
 
 
-import { useState} from "react";
+import { useState,useMemo} from "react";
 
 
 const App=()=>
@@ -363,10 +363,12 @@ const App=()=>
   const [num,setNum]=useState("");
   const [name,setName]=useState("");
   
-const multi=()=>{
+const multi=useMemo(()=>{
+  console.log(";;;;;");
   for(var i=0;i<1000000000;i++){};
-  return num*2;
-}
+  
+  return  num *2;
+},[num])
   
 
 
@@ -377,10 +379,41 @@ const multi=()=>{
 Enter number:<input type="number" value={num} onChange={(e)=>{setNum(e.target.value)}}/>
 Enter name:<input type="text" value={name}  onChange={(e)=>{setName(e.target.value)}}/>
 
-<h1>Multiplication: {multi()}</h1>
+<h1>Multiplication: {multi}</h1>
     
     
     </>
   )
 }
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------Context Api---------------------------------------------------------------------------
+// Global state management
+
+// const App=()=>{
+//   return(
+//     <>
+
+//     <h1>Context Api!</h1>
+    
+    
+    
+//     </>
+//   )
+// }
+// export default App;
